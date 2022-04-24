@@ -20,6 +20,18 @@ sourceSets {
     }
 }
 
+plugins {
+  id "org.sonarqube" version "3.3"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "jehag_LOG8371"
+    property "sonar.organization", "jehag"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
+
 dependencies {
 	compile \
 		fileTree(dir: "${webAppDirName}/WEB-INF/lib", include: '*.jar'),
